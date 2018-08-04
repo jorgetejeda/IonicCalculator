@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculate
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <div class="content-calc" text-right>
+          <small class="operation"><span *ngFor="let b of box">{{b}}</span></small>
+          <span class="result">{{result}}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+          <button ion-button color="secondary" block (click)="Clear()"> Clear </button>        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-8>
+        <button class="btn-num" ion-button *ngFor="let num of number" (click)="boxNumber(num)">{{num}}</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button class="btn-sign" (click)="opeDiv()" >/</button>
+        <button ion-button class="btn-sign" (click)="opeMult()" >x</button>
+        <button ion-button class="btn-sign" (click)="opeRest()" >-</button>
+        <button ion-button class="btn-sign" (click)="opeSum()" >+</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button color="secondary" block (click)="Operation()"> = </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,22 @@
+.btn-num{
+    width: 30%;
+}
+.btn-sign{
+    width: 100%;
+}
+.btn-num:last-child{
+    margin-left:62px;
+}
+.content-calc{
+    border:1px solid #ddd;
+    width: 100%;
+    height:37px;
+    padding: 5px;
+}
+.operation{
+    display: block;
+    line-height: 1;
+}
+.result{
+    line-height: 1;
+}
